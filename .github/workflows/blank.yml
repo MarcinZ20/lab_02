@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: pip install --upgrade pip
-      - run: pip install nbconvert Pint matplotlib scipy
+      - run: pip install nbconvert Pint matplotlib scipy ipykernel
       - uses: actions/checkout@v4
       - run: sudo apt-get install pandoc texlive-xetex inkscape
       - run: python -m nbconvert --to pdf lab_2.ipynb --execute
